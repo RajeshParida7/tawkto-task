@@ -5,7 +5,7 @@
       <input type="text" v-model="searchQuery" placeholder="Search Categories" class="search-input"
         @input="searchCategories" />
       <button @click="searchCategories" class="search-button">
-        <img src="http://localhost:9000/images/search.svg" alt="">
+        <img src="http://localhost:9000/images/search.svg" alt="Search" />
       </button>
     </div>
 
@@ -78,28 +78,29 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
 }
 
 .search-container {
   position: relative;
-  width: 60%;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
   margin-bottom: 50px;
 
   .search-input {
     width: 100%;
+    width: -webkit-fill-available;
     padding: 18px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     color: #9C9AA6;
-    width: -webkit-fill-available;
 
     &::placeholder {
-      font-size: 16px !important;
+      font-size: 16px;
       color: #9C9AA6;
     }
   }
@@ -109,15 +110,12 @@ export default {
     right: 0;
     top: 0;
     height: 100%;
-    padding: 8px 21px;
-    font-size: 16px;
+    padding: 8px 20px;
     background-color: #03A84E;
     color: white;
-    border: 1px solid #03A84E;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 0px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
 
     &:hover {
       background-color: #45a049;
@@ -167,26 +165,39 @@ export default {
   margin-top: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .categories-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .search-input,
-  .search-button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .search-container {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .categories-grid {
-    grid-template-columns: 1fr;
+    display: block;
+    padding: 1rem;
+  }
+  .category{
+    margin: 2rem 0;
+  }
+
+
+
+}
+
+@media (max-width: 480px) {
+
+
+  .container {
+    width: 85%;
+    padding: 10px;
+  }
+
+  .category h3 {
+    font-size: 16px;
+  }
+
+  .last-updated {
+    font-size: 10px;
   }
 }
 </style>

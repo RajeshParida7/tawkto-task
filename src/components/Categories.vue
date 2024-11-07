@@ -448,4 +448,17 @@ export default {
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 768px) {
+    .search-container {
+        margin: 20px auto;
+        width: 90%;
+    }
+    .container{
+        padding: 1rem;
+    }
+    .grid-container{
+        display: block;
+    }
+}
 </style>
