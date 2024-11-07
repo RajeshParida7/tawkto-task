@@ -18,8 +18,6 @@
             </div>
 
             <div class="grid-container">
-
-
                 <div class="category-section">
 
                     <div v-if="selectedCategory" class="category">
@@ -46,8 +44,6 @@
                     </div>
 
                 </div>
-
-
                 <div class="articles-section">
                     <div v-if="filteredArticles.length > 0">
                         <ul>
@@ -244,43 +240,43 @@ export default {
 }
 
 .search-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 50px;
-
-  .search-input {
+    position: relative;
     width: 100%;
-    width: -webkit-fill-available;
-    padding: 18px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #9C9AA6;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
 
-    &::placeholder {
-      font-size: 16px;
-      color: #9C9AA6;
+    .search-input {
+        width: 100%;
+        width: -webkit-fill-available;
+        padding: 18px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #9C9AA6;
+
+        &::placeholder {
+            font-size: 16px;
+            color: #9C9AA6;
+        }
     }
-  }
 
-  .search-button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    padding: 8px 20px;
-    background-color: #03A84E;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    .search-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        padding: 8px 20px;
+        background-color: #03A84E;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
 
-    &:hover {
-      background-color: #45a049;
+        &:hover {
+            background-color: #45a049;
+        }
     }
-  }
 }
 
 
@@ -292,6 +288,18 @@ export default {
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
     }
+}
+
+
+.article-no {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: -.2rem;
+}
+
+.article-no img {
+    margin-right: 5px;
 }
 
 .articles-section ul {
@@ -462,5 +470,3 @@ export default {
     }
 }
 </style>
-
-
