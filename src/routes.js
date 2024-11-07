@@ -18,7 +18,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history', // Optional: removes the hash (#) from the URL
+  mode: 'history', 
 });
 
-export default router;  // Export the VueRouter instance
+export default router;  
